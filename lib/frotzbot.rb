@@ -180,7 +180,7 @@ module DiscourseFrotz
             line = ""
           end
 
-          if !line.nil? && (line.downcase.match?("\.{7}") || line.downcase.match?("\\*\\*more\\*\\*") || (line.downcase.match?("press\s") && line.match?("\sto\s"))) then
+          if !line.nil? && (line.downcase.match?("\s\.\.\.\.\.\.\.\s") || line.downcase.match?("\\*\\*more\\*\\*") || (line.downcase.match?("press\s") && line.match?("\sto\s"))) then
             stdin.putc 0xa
           elsif line == ""
             if !responded
